@@ -1,0 +1,17 @@
+cat temp/cloud-apps/docker-ubuntu-vnc-desktop/compose-lxde 
+version: '3.9'
+services:
+  lxde:
+    image: dorowu/ubuntu-desktop-lxde-vnc
+    container_name: ubuntu-desktop-lxde-vnc
+    build:
+      context: .
+      dockerfile:  dockerfile.lxde 
+    ports:
+      - 9903:80
+    #environment:
+    #  - VNC_PASSWORD=vncpwd
+    #  - USER=ubuntu
+    #  - PASSWORD=loginpwd
+    #  - RESOLUTION=1366x651
+    restart: always
