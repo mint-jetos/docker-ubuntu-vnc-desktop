@@ -80,15 +80,12 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 
 # build frontend
 COPY web /src/web
-<<<<<<< HEAD
-=======
 
 RUN cd /src/web/static && rm -rf novnc && rm -rf websockify && \
     apt update && apt install -y git bash && \
     git clone https://github.com/novnc/noVNC.git && mv noVNC novnc && \
     git clone https://github.com/novnc/websockify.git
 
->>>>>>> 4943980 (changed fcwu / docker-ubuntu-vnc-desktop)
 RUN cd /src/web \
     && yarn \
     && yarn build
