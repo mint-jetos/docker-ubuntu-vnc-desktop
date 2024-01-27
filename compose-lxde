@@ -1,4 +1,3 @@
-cat temp/cloud-apps/docker-ubuntu-vnc-desktop/compose-lxde 
 version: '3.9'
 services:
   lxde:
